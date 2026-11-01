@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you | Permit Engineering</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a permit drawing set — title-block frames, sheet numbers, red revision band; navy/red/white brand */
+:root{
+  --bg:#FFFFFF;
+  --bg-alt:#F2F4F7;
+  --ink:#0E1726;
+  --ink-2:#44506A;
+  --rule:#0E1726;
+  --hair:#D5DAE3;
+  --red:#ED1C24;
+  --red-ink:#C8141B;
+  --on-red:#FFFFFF;
+  --card:#FFFFFF;
+  --logo-legal:#44506A;
+  --f-display:"Orbitron","Eurostile","Arial Black",sans-serif;
+  --f-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --max:1160px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1220;--bg-alt:#111B2E;--ink:#F3F5F9;--ink-2:#B5BECE;--rule:#E6EAF1;--hair:#26324A;
+  --red:#ED1C24;--red-ink:#FF5A5F;--on-red:#FFFFFF;--card:#0F1829;--logo-legal:#C5CCD8;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1220;--bg-alt:#111B2E;--ink:#F3F5F9;--ink-2:#B5BECE;--rule:#E6EAF1;--hair:#26324A;
+  --red:#ED1C24;--red-ink:#FF5A5F;--on-red:#FFFFFF;--card:#0F1829;--logo-legal:#C5CCD8;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:var(--red-ink)}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-ink)}
+
+/* logo */
+.logo{display:block;width:100%;height:auto}
+.logo .lf,.logo .lh{fill:var(--ink)} .logo .lfs{stroke:var(--ink)}
+.logo .ll{fill:var(--logo-legal)} .logo .lb,.logo .lc{fill:var(--red)} .logo .lt{fill:var(--on-red)}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--hair)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:10px}
+.brand{width:200px;flex:none}
+.nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{color:var(--red-ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 22px;background:var(--red);color:var(--on-red);text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;border:0;cursor:pointer;font-family:var(--f-body)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.nav .btn{color:var(--on-red);min-height:42px;padding:0 18px}
+@media (max-width:860px){.nav a:not(.btn){display:none}.brand{width:150px}.nav .btn{font-size:13px;padding:0 12px;white-space:nowrap}}
+
+/* hero */
+.hero{padding-block:72px 64px;border-bottom:1px solid var(--hair)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.hero h1{font-family:var(--f-display);font-weight:900;font-size:clamp(30px,4.4vw,50px);letter-spacing:.01em;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--red-ink)}
+.hero .lede{font-size:19px;color:var(--ink-2);max-width:56ch;margin-top:20px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.creds{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;color:var(--ink-2);text-transform:uppercase}
+.creds span::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);margin-right:10px;vertical-align:1px}
+
+/* sheet index title block */
+.sheet{border:3px solid var(--rule);background:var(--card);font-family:var(--f-mono);font-size:14px;position:relative}
+.sheet::before,.sheet::after{content:"";position:absolute;width:18px;height:18px;border:3px solid var(--red)}
+.sheet::before{top:-14px;left:-14px;border-right:0;border-bottom:0}
+.sheet::after{bottom:-14px;right:-14px;border-left:0;border-top:0}
+.sheet-head{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:2px solid var(--rule);font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.sheet table{width:100%;border-collapse:collapse}
+.sheet td{padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sheet td:first-child{width:92px;color:var(--red-ink);font-weight:500;white-space:nowrap}
+.sheet td:last-child{font-family:var(--f-body);color:var(--ink)}
+.sheet-foot{background:var(--red);color:var(--on-red);padding:10px 16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* sections */
+section{padding-block:84px}
+.sec-head{display:grid;gap:12px;max-width:720px;margin-bottom:44px}
+.sec-head h2{font-family:var(--f-display);font-weight:700;font-size:clamp(24px,3vw,34px);letter-spacing:.01em}
+.sec-head p{color:var(--ink-2);font-size:18px}
+.alt{background:var(--bg-alt)}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.svc{grid-column:span 2;background:var(--card);border:1px solid var(--hair);border-top:4px solid var(--ink);padding:26px 24px 24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.svc:nth-child(4),.svc:nth-child(5){grid-column:span 3}
+.svc .code{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;color:var(--red-ink)}
+.svc h3{font-size:21px;font-weight:600}
+.svc p{color:var(--ink-2);font-size:16px}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;font-size:15px}
+.svc li{padding-left:18px;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--red)}
+.svc .refs{margin-top:auto;padding-top:14px;border-top:1px dashed var(--hair);font-family:var(--f-mono);font-size:12px;color:var(--ink-2);letter-spacing:.03em}
+.svc.sign{border-top-color:var(--red)}
+@media (max-width:960px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.svc,.svc:nth-child(4){grid-column:span 1}.svc:nth-child(5){grid-column:span 2}}
+@media (max-width:620px){.svc-grid{grid-template-columns:minmax(0,1fr)}.svc,.svc:nth-child(4),.svc:nth-child(5){grid-column:span 1}}
+
+/* signs feature */
+.signs .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.signs h2{font-family:var(--f-display);font-weight:700;font-size:clamp(24px,3vw,34px);margin-top:12px}
+.signs p{color:var(--ink-2);margin-top:16px;max-width:58ch}
+.signs ul{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.signs li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px}
+.signs li svg{margin-top:4px}
+.elev{border:2px solid var(--rule);background:var(--card);padding:18px}
+.elev svg{display:block;width:100%;height:auto}
+.elev figcaption{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:10px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.elev .st{stroke:var(--ink);fill:none}
+.elev .dim{stroke:var(--ink-2);fill:none}
+.elev .tx{fill:var(--ink-2);font-family:var(--f-mono);font-size:11px}
+.elev .lt{fill:var(--red)}
+.elev .wall{fill:var(--bg-alt);stroke:var(--ink)}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:2px solid var(--rule)}
+.steps li{padding:24px 20px;border-right:1px solid var(--hair);display:flex;flex-direction:column;gap:10px;min-width:0;background:var(--card)}
+.steps li:last-child{border-right:0}
+.steps .n{font-family:var(--f-display);font-weight:900;font-size:28px;color:var(--red-ink)}
+.steps h3{font-size:17px;font-weight:600}
+.steps p{font-size:15px;color:var(--ink-2)}
+@media (max-width:900px){.steps{grid-template-columns:minmax(0,1fr)}.steps li{border-right:0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:14px}.steps li:last-child{border-bottom:0}.steps .n{grid-row:span 2}}
+
+/* checklist */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+.check{list-style:none;margin:0;padding:0;border-top:2px solid var(--rule)}
+.check li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.check .bx{width:20px;height:20px;border:2px solid var(--ink);margin-top:3px;position:relative}
+.check .bx::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid var(--red);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.check strong{font-weight:600}
+.check p{color:var(--ink-2);font-size:15px}
+.why{display:grid;gap:26px}
+.why div{border-left:3px solid var(--red);padding-left:18px}
+.why h3{font-size:18px;font-weight:600}
+.why p{color:var(--ink-2);font-size:16px;margin-top:4px}
+@media (max-width:860px){.two,.signs .wrap,.hero .wrap{grid-template-columns:minmax(0,1fr);gap:40px}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px}
+.contact h2{font-family:var(--f-display);font-weight:700;font-size:clamp(24px,3vw,34px);margin-top:12px}
+.contact .eyebrow{color:#FF6B70}
+.contact p.lead{opacity:.85;margin-top:14px;max-width:46ch}
+.dl{margin-top:30px;display:grid;gap:18px}
+.dl div{display:grid;gap:2px}
+.dl dt{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.dl dd{margin:0;font-size:18px;font-weight:500;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.copy{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:inherit;border:1px solid currentColor;opacity:.75;padding:6px 10px;min-height:32px;cursor:pointer}
+.copy:hover{opacity:1}
+form{background:var(--bg);color:var(--ink);padding:30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;border-top:6px solid var(--red)}
+form .full{grid-column:1/-1}
+label{display:grid;gap:6px;font-size:14px;font-weight:600}
+input,select,textarea{font:16px var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--ink-2);padding:11px 12px;min-height:46px;width:100%}
+textarea{min-height:120px;resize:vertical}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+legend{font-size:14px;font-weight:600;margin-bottom:8px;padding:0}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--hair);padding:8px 12px;font-weight:500;font-size:14px;cursor:pointer;min-height:44px}
+.chip input{width:18px;height:18px;min-height:0;accent-color:var(--red)}
+.form-msg{grid-column:1/-1;font-size:15px;color:var(--ink-2)}
+@media (max-width:860px){.contact .wrap{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){form{grid-template-columns:minmax(0,1fr);padding:22px}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .contact{background:#060B15;color:var(--ink)}}
+:root[data-theme="dark"] .contact{background:#060B15;color:var(--ink)}
+
+/* footer */
+footer{padding-block:40px;border-top:1px solid var(--hair);font-size:14px;color:var(--ink-2)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .flogo{width:220px}
+footer .lic{font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;display:grid;gap:4px}
+</style><style>body{margin:0}</style></head>
+<body><main class="wrap" style="max-width:640px;padding-block:80px;display:grid;gap:24px">
+<div style="width:280px"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 366" role="img" aria-label="Permit Engineering, Eng Tech Net, Inc. Engineering solutions for contractors"><rect x="16" y="16" width="22" height="3" class="lc"/><rect x="16" y="16" width="3" height="22" class="lc"/><rect x="1162" y="16" width="22" height="3" class="lc"/><rect x="1181" y="16" width="3" height="22" class="lc"/><rect x="16" y="347" width="22" height="3" class="lc"/><rect x="16" y="328" width="3" height="22" class="lc"/><rect x="1162" y="347" width="22" height="3" class="lc"/><rect x="1181" y="328" width="3" height="22" class="lc"/><rect x="36" y="36" width="1128" height="294" fill="none" class="lfs" stroke-width="4"/><rect x="38" y="178" width="1124" height="2" class="lf"/><path transform="translate(145.85 133.56)" d="M3.97 0.0V-51.04H44.51Q47.42 -51.04 49.80 -49.62Q52.18 -48.20 53.64 -45.79Q55.09 -43.38 55.09 -40.54V-27.33Q55.09 -24.49 53.64 -22.08Q52.18 -19.66 49.80 -18.24Q47.42 -16.82 44.51 -16.82L14.98 -16.75V0.0ZM14.98 -27.90H43.94Q43.94 -27.90 43.94 -27.90Q43.94 -27.90 43.94 -27.90V-40.04Q43.94 -40.04 43.94 -40.04Q43.94 -40.04 43.94 -40.04H14.98Q14.98 -40.04 14.98 -40.04Q14.98 -40.04 14.98 -40.04V-27.90Q14.98 -27.90 14.98 -27.90Q14.98 -27.90 14.98 -27.90ZM62.27 0.0V-51.12H109.49V-40.04H73.42V-31.09H102.46V-20.02H73.42V-11.07H109.49V0.0ZM158.21 0.0 143.37 -17.67H157.78L169.57 -3.76V0.0ZM118.52 0.0V-51.04H159.06Q161.97 -51.04 164.35 -49.62Q166.73 -48.20 168.18 -45.79Q169.64 -43.38 169.64 -40.54V-27.33Q169.64 -24.49 168.18 -22.08Q166.73 -19.66 164.35 -18.24Q161.97 -16.82 159.06 -16.82L129.52 -16.75V0.0ZM129.52 -27.90H158.49Q158.49 -27.90 158.49 -27.90Q158.49 -27.90 158.49 -27.90V-40.04Q158.49 -40.04 158.49 -40.04Q158.49 -40.04 158.49 -40.04H129.52Q129.52 -40.04 129.52 -40.04Q129.52 -40.04 129.52 -40.04V-27.90Q129.52 -27.90 129.52 -27.90Q129.52 -27.90 129.52 -27.90ZM179.09 0.0V-51.12H190.45L207.78 -30.45L225.03 -51.12H236.46V0.0H225.39V-34.29L207.78 -13.27L190.10 -34.22V0.0ZM245.21 0.0V-51.12H256.07V0.0ZM281.64 0.0V-40.04H261.62V-51.12H312.74V-40.04H292.72V0.0ZM345.07 0.0V-51.12H392.28V-40.04H356.22V-31.09H385.25V-20.02H356.22V-11.07H392.28V0.0ZM401.31 0.0V-51.12H412.67L441.29 -17.04V-51.12H452.43V0.0H441.07L412.32 -34.22V0.0ZM472.89 0.0Q470.05 0.0 467.64 -1.42Q465.22 -2.84 463.80 -5.25Q462.38 -7.66 462.38 -10.50V-40.61Q462.38 -43.52 463.80 -45.90Q465.22 -48.27 467.64 -49.69Q470.05 -51.12 472.89 -51.12H502.93Q505.84 -51.12 508.21 -49.69Q510.59 -48.27 512.05 -45.90Q513.50 -43.52 513.50 -40.61V-35.78H502.36V-40.04Q502.36 -40.04 502.36 -40.04Q502.36 -40.04 502.36 -40.04H473.39Q473.39 -40.04 473.39 -40.04Q473.39 -40.04 473.39 -40.04V-11.07Q473.39 -11.07 473.39 -11.07Q473.39 -11.07 473.39 -11.07H502.36Q502.36 -11.07 502.36 -11.07Q502.36 -11.07 502.36 -11.07V-18.74H491.28V-29.81H513.50V-10.50Q513.50 -7.66 512.05 -5.25Q510.59 -2.84 508.21 -1.42Q505.84 0.0 502.93 0.0ZM521.54 0.0V-51.12H532.40V0.0ZM540.51 0.0V-51.12H551.87L580.48 -17.04V-51.12H591.63V0.0H580.27L551.51 -34.22V0.0ZM601.72 0.0V-51.12H648.94V-40.04H612.87V-31.09H641.91V-20.02H612.87V-11.07H648.94V0.0ZM658.11 0.0V-51.12H705.32V-40.04H669.25V-31.09H698.29V-20.02H669.25V-11.07H705.32V0.0ZM754.04 0.0 739.20 -17.67H753.61L765.40 -3.76V0.0ZM714.35 0.0V-51.04H754.89Q757.80 -51.04 760.18 -49.62Q762.56 -48.20 764.02 -45.79Q765.47 -43.38 765.47 -40.54V-27.33Q765.47 -24.49 764.02 -22.08Q762.56 -19.66 760.18 -18.24Q757.80 -16.82 754.89 -16.82L725.36 -16.75V0.0ZM725.36 -27.90H754.32Q754.32 -27.90 754.32 -27.90Q754.32 -27.90 754.32 -27.90V-40.04Q754.32 -40.04 754.32 -40.04Q754.32 -40.04 754.32 -40.04H725.36Q725.36 -40.04 725.36 -40.04Q725.36 -40.04 725.36 -40.04V-27.90Q725.36 -27.90 725.36 -27.90Q725.36 -27.90 725.36 -27.90ZM773.15 0.0V-51.12H784.01V0.0ZM792.12 0.0V-51.12H803.48L832.09 -17.04V-51.12H843.24V0.0H831.88L803.13 -34.22V0.0ZM863.70 0.0Q860.86 0.0 858.45 -1.42Q856.03 -2.84 854.61 -5.25Q853.19 -7.66 853.19 -10.50V-40.61Q853.19 -43.52 854.61 -45.90Q856.03 -48.27 858.45 -49.69Q860.86 -51.12 863.70 -51.12H893.73Q896.64 -51.12 899.02 -49.69Q901.40 -48.27 902.86 -45.90Q904.31 -43.52 904.31 -40.61V-35.78H893.17V-40.04Q893.17 -40.04 893.17 -40.04Q893.17 -40.04 893.17 -40.04H864.20Q864.20 -40.04 864.20 -40.04Q864.20 -40.04 864.20 -40.04V-11.07Q864.20 -11.07 864.20 -11.07Q864.20 -11.07 864.20 -11.07H893.17Q893.17 -11.07 893.17 -11.07Q893.17 -11.07 893.17 -11.07V-18.74H882.09V-29.81H904.31V-10.50Q904.31 -7.66 902.86 -5.25Q901.40 -2.84 899.02 -1.42Q896.64 0.0 893.73 0.0Z" class="lh"/><path transform="translate(338.65 233.65)" d="M3.66 0.0V-27.3H23.59V-23.04H8.73V-4.25H24.14V0.0ZM8.34 -11.77V-15.95H21.91V-11.77ZM36.79 0.0V-27.3H40.96L58.08 -6.27H56.02V-27.3H61.05V0.0H56.88L39.76 -21.02H41.82V0.0ZM88.13 0.39Q84.94 0.39 82.26 -0.64Q79.59 -1.67 77.60 -3.56Q75.62 -5.46 74.52 -8.03Q73.43 -10.60 73.43 -13.65Q73.43 -16.69 74.52 -19.26Q75.62 -21.84 77.62 -23.73Q79.63 -25.62 82.32 -26.65Q85.01 -27.69 88.21 -27.69Q91.68 -27.69 94.47 -26.55Q97.26 -25.42 99.17 -23.24L95.97 -20.12Q94.37 -21.72 92.52 -22.48Q90.67 -23.24 88.45 -23.24Q86.30 -23.24 84.47 -22.54Q82.64 -21.84 81.31 -20.55Q79.98 -19.26 79.26 -17.51Q78.54 -15.75 78.54 -13.65Q78.54 -11.58 79.26 -9.82Q79.98 -8.07 81.31 -6.76Q82.64 -5.46 84.43 -4.75Q86.22 -4.05 88.41 -4.05Q90.44 -4.05 92.33 -4.69Q94.22 -5.34 95.93 -6.86L98.82 -3.08Q96.68 -1.36 93.85 -0.48Q91.02 0.39 88.13 0.39ZM98.82 -3.08 94.02 -3.74V-13.96H98.82ZM135.79 0.0V-23.01H126.74V-27.3H149.91V-23.01H140.86V0.0ZM160.73 0.0V-27.3H180.66V-23.04H165.80V-4.25H181.21V0.0ZM165.41 -11.77V-15.95H178.98V-11.77ZM206.50 0.39Q203.38 0.39 200.71 -0.64Q198.03 -1.67 196.06 -3.56Q194.1 -5.46 193.00 -8.03Q191.91 -10.60 191.91 -13.65Q191.91 -16.69 193.00 -19.26Q194.1 -21.84 196.08 -23.73Q198.07 -25.62 200.72 -26.65Q203.38 -27.69 206.54 -27.69Q209.89 -27.69 212.66 -26.53Q215.43 -25.38 217.34 -23.12L214.06 -20.04Q212.58 -21.64 210.75 -22.44Q208.92 -23.24 206.77 -23.24Q204.63 -23.24 202.85 -22.54Q201.08 -21.84 199.77 -20.55Q198.46 -19.26 197.74 -17.51Q197.02 -15.75 197.02 -13.65Q197.02 -11.54 197.74 -9.78Q198.46 -8.03 199.77 -6.74Q201.08 -5.46 202.85 -4.75Q204.63 -4.05 206.77 -4.05Q208.92 -4.05 210.75 -4.85Q212.58 -5.65 214.06 -7.29L217.34 -4.17Q215.43 -1.95 212.66 -0.78Q209.89 0.39 206.50 0.39ZM248.05 0.0V-27.3H253.12V0.0ZM228.86 0.0V-27.3H233.93V0.0ZM233.50 -11.7V-16.02H248.44V-11.7ZM285.22 0.0V-27.3H289.39L306.51 -6.27H304.44V-27.3H309.48V0.0H305.30L288.18 -21.02H290.25V0.0ZM323.81 0.0V-27.3H343.74V-23.04H328.88V-4.25H344.28V0.0ZM328.49 -11.77V-15.95H342.06V-11.77ZM362.48 0.0V-23.01H353.43V-27.3H376.59V-23.01H367.55V0.0ZM385.66 5.88 387.92 -2.73 388.59 0.15Q387.22 0.15 386.30 -0.68Q385.39 -1.52 385.39 -2.96Q385.39 -4.44 386.30 -5.32Q387.22 -6.20 388.55 -6.20Q389.91 -6.20 390.81 -5.30Q391.71 -4.40 391.71 -2.96Q391.71 -2.57 391.63 -2.12Q391.55 -1.67 391.37 -1.09Q391.20 -0.50 390.81 0.39L388.82 5.88ZM421.70 0.0V-27.3H426.77V0.0ZM441.14 0.0V-27.3H445.31L462.43 -6.27H460.36V-27.3H465.39V0.0H461.22L444.10 -21.02H446.17V0.0ZM492.36 0.39Q489.24 0.39 486.57 -0.64Q483.90 -1.67 481.93 -3.56Q479.96 -5.46 478.87 -8.03Q477.78 -10.60 477.78 -13.65Q477.78 -16.69 478.87 -19.26Q479.96 -21.84 481.95 -23.73Q483.94 -25.62 486.59 -26.65Q489.24 -27.69 492.40 -27.69Q495.76 -27.69 498.52 -26.53Q501.29 -25.38 503.20 -23.12L499.93 -20.04Q498.45 -21.64 496.61 -22.44Q494.78 -23.24 492.64 -23.24Q490.49 -23.24 488.72 -22.54Q486.94 -21.84 485.63 -20.55Q484.33 -19.26 483.61 -17.51Q482.89 -15.75 482.89 -13.65Q482.89 -11.54 483.61 -9.78Q484.33 -8.03 485.63 -6.74Q486.94 -5.46 488.72 -4.75Q490.49 -4.05 492.64 -4.05Q494.78 -4.05 496.61 -4.85Q498.45 -5.65 499.93 -7.29L503.20 -4.17Q501.29 -1.95 498.52 -0.78Q495.76 0.39 492.36 0.39ZM515.82 0.27Q514.49 0.27 513.56 -0.64Q512.62 -1.56 512.62 -2.96Q512.62 -4.44 513.56 -5.32Q514.49 -6.20 515.82 -6.20Q517.15 -6.20 518.08 -5.32Q519.02 -4.44 519.02 -2.96Q519.02 -1.56 518.08 -0.64Q517.15 0.27 515.82 0.27Z" class="ll"/><rect x="38" y="260" width="1124" height="68" class="lb"/><path transform="translate(192.60 304.47)" d="M16.25 0.0H2.46V-20.93H16.25V-17.43H6.42V-12.33H15.12V-8.85H6.42V-3.51H16.25ZM36.76 0.0 30.46 -10.74 28.3 -15.09H28.21V-10.62V0.0H24.46V-20.93H28.81L35.11 -10.2L37.26 -5.85H37.36V-10.32V-20.93H41.11V0.0ZM63.37 0.0V-3.23H63.26Q62.99 -1.71 61.56 -0.67Q60.14 0.36 57.76 0.36Q55.31 0.36 53.36 -0.87Q51.41 -2.1 50.26 -4.5Q49.13 -6.89 49.13 -10.41Q49.13 -13.92 50.3 -16.34Q51.47 -18.77 53.57 -20.04Q55.67 -21.3 58.46 -21.3Q61.25 -21.3 63.26 -20.05Q65.27 -18.81 66.38 -16.53L63.17 -14.63Q62.6 -16.02 61.46 -16.90Q60.32 -17.79 58.46 -17.79Q56.93 -17.79 55.77 -17.14Q54.62 -16.5 53.97 -15.25Q53.33 -14.01 53.33 -12.15V-8.79Q53.33 -6.96 53.97 -5.69Q54.62 -4.43 55.79 -3.79Q56.96 -3.15 58.51 -3.15Q59.75 -3.15 60.76 -3.55Q61.79 -3.96 62.39 -4.75Q62.99 -5.55 62.99 -6.72V-8.07H58.87V-11.4H66.8V0.0ZM84.03 0.0H74.52V-3.17H77.28V-17.75H74.52V-20.93H84.03V-17.75H81.24V-3.17H84.03ZM104.38 0.0 98.08 -10.74 95.92 -15.09H95.83V-10.62V0.0H92.08V-20.93H96.43L102.73 -10.2L104.89 -5.85H104.98V-10.32V-20.93H108.73V0.0ZM131.45 0.0H117.64V-20.93H131.45V-17.43H121.61V-12.33H130.31V-8.85H121.61V-3.51H131.45ZM153.45 0.0H139.65V-20.93H153.45V-17.43H143.60V-12.33H152.31V-8.85H143.60V-3.51H153.45ZM165.60 -8.07V0.0H161.65V-20.93H171.1Q173.02 -20.93 174.4 -20.14Q175.78 -19.34 176.53 -17.89Q177.28 -16.43 177.28 -14.45Q177.28 -12.33 176.30 -10.75Q175.32 -9.18 173.38 -8.52L177.67 0.0H173.26L169.35 -8.07ZM165.60 -11.4H170.71Q171.49 -11.4 172.03 -11.68Q172.57 -11.96 172.87 -12.49Q173.17 -13.02 173.17 -13.77V-15.14Q173.17 -15.93 172.87 -16.43Q172.57 -16.95 172.03 -17.22Q171.49 -17.49 170.71 -17.49H165.60ZM194.20 0.0H184.7V-3.17H187.45V-17.75H184.7V-20.93H194.20V-17.75H191.42V-3.17H194.20ZM214.55 0.0 208.26 -10.74 206.1 -15.09H206.01V-10.62V0.0H202.26V-20.93H206.60L212.90 -10.2L215.07 -5.85H215.15V-10.32V-20.93H218.90V0.0ZM241.17 0.0V-3.23H241.05Q240.78 -1.71 239.36 -0.67Q237.93 0.36 235.56 0.36Q233.10 0.36 231.15 -0.87Q229.20 -2.1 228.07 -4.5Q226.92 -6.89 226.92 -10.41Q226.92 -13.92 228.09 -16.34Q229.26 -18.77 231.36 -20.04Q233.46 -21.3 236.25 -21.3Q239.04 -21.3 241.05 -20.05Q243.06 -18.81 244.17 -16.53L240.96 -14.63Q240.39 -16.02 239.26 -16.90Q238.11 -17.79 236.25 -17.79Q234.72 -17.79 233.57 -17.14Q232.42 -16.5 231.77 -15.25Q231.12 -14.01 231.12 -12.15V-8.79Q231.12 -6.96 231.77 -5.69Q232.42 -4.43 233.58 -3.79Q234.75 -3.15 236.31 -3.15Q237.54 -3.15 238.57 -3.55Q239.58 -3.96 240.18 -4.75Q240.78 -5.55 240.78 -6.72V-8.07H236.67V-11.4H244.59V0.0ZM270.78 0.36Q268.10 0.36 266.20 -0.60Q264.29 -1.56 262.97 -3.12L265.64 -5.7Q266.72 -4.43 268.06 -3.78Q269.39 -3.12 271.01 -3.12Q272.84 -3.12 273.78 -3.93Q274.70 -4.74 274.70 -6.06Q274.70 -6.77 274.45 -7.30Q274.19 -7.83 273.56 -8.19Q272.93 -8.54 271.85 -8.73L269.87 -9.03Q267.78 -9.36 266.38 -10.14Q264.98 -10.92 264.29 -12.18Q263.60 -13.44 263.60 -15.12Q263.60 -17.00 264.53 -18.39Q265.46 -19.77 267.16 -20.53Q268.85 -21.3 271.19 -21.3Q273.56 -21.3 275.33 -20.50Q277.10 -19.71 278.36 -18.21L275.66 -15.66Q274.88 -16.62 273.78 -17.22Q272.66 -17.82 270.98 -17.82Q269.30 -17.82 268.43 -17.17Q267.56 -16.53 267.56 -15.36Q267.56 -14.54 267.86 -14.04Q268.16 -13.53 268.82 -13.24Q269.48 -12.95 270.47 -12.75L272.42 -12.38Q274.55 -12.03 275.93 -11.25Q277.31 -10.46 277.97 -9.25Q278.63 -8.04 278.63 -6.3Q278.63 -4.32 277.72 -2.82Q276.80 -1.31 275.03 -0.47Q273.26 0.36 270.78 0.36ZM294.81 0.36Q292.08 0.36 290.01 -0.87Q287.94 -2.1 286.82 -4.51Q285.69 -6.93 285.69 -10.46Q285.69 -14.01 286.82 -16.42Q287.94 -18.84 290.01 -20.07Q292.08 -21.3 294.81 -21.3Q297.57 -21.3 299.63 -20.07Q301.68 -18.84 302.81 -16.42Q303.93 -14.01 303.93 -10.46Q303.93 -6.93 302.81 -4.51Q301.68 -2.1 299.63 -0.87Q297.57 0.36 294.81 0.36ZM294.81 -3.15Q296.34 -3.15 297.44 -3.84Q298.53 -4.53 299.13 -5.80Q299.73 -7.08 299.73 -8.85V-12.09Q299.73 -13.88 299.13 -15.14Q298.53 -16.41 297.44 -17.1Q296.34 -17.79 294.81 -17.79Q293.34 -17.79 292.23 -17.1Q291.12 -16.41 290.51 -15.14Q289.89 -13.88 289.89 -12.09V-8.85Q289.89 -7.08 290.51 -5.80Q291.12 -4.53 292.23 -3.84Q293.34 -3.15 294.81 -3.15ZM324.16 0.0H311.95V-20.93H315.91V-3.51H324.16ZM331.43 -20.93H335.33V-8.07Q335.33 -6.45 335.74 -5.35Q336.14 -4.26 337.06 -3.70Q337.97 -3.15 339.47 -3.15Q340.97 -3.15 341.87 -3.70Q342.77 -4.26 343.19 -5.35Q343.61 -6.45 343.61 -8.07V-20.93H347.48V-8.58Q347.48 -5.52 346.69 -3.52Q345.89 -1.53 344.14 -0.58Q342.38 0.36 339.44 0.36Q336.50 0.36 334.75 -0.58Q332.99 -1.53 332.21 -3.52Q331.43 -5.52 331.43 -8.58ZM370.44 -17.43H364.47V0.0H360.52V-17.43H354.57V-20.93H370.44ZM386.29 0.0H376.78V-3.17H379.54V-17.75H376.78V-20.93H386.29V-17.75H383.50V-3.17H386.29ZM402.56 0.36Q399.83 0.36 397.76 -0.87Q395.69 -2.1 394.57 -4.51Q393.44 -6.93 393.44 -10.46Q393.44 -14.01 394.57 -16.42Q395.69 -18.84 397.76 -20.07Q399.83 -21.3 402.56 -21.3Q405.32 -21.3 407.38 -20.07Q409.43 -18.84 410.56 -16.42Q411.68 -14.01 411.68 -10.46Q411.68 -6.93 410.56 -4.51Q409.43 -2.1 407.38 -0.87Q405.32 0.36 402.56 0.36ZM402.56 -3.15Q404.09 -3.15 405.19 -3.84Q406.28 -4.53 406.88 -5.80Q407.48 -7.08 407.48 -8.85V-12.09Q407.48 -13.88 406.88 -15.14Q406.28 -16.41 405.19 -17.1Q404.09 -17.79 402.56 -17.79Q401.09 -17.79 399.98 -17.1Q398.87 -16.41 398.26 -15.14Q397.64 -13.88 397.64 -12.09V-8.85Q397.64 -7.08 398.26 -5.80Q398.87 -4.53 399.98 -3.84Q401.09 -3.15 402.56 -3.15ZM432.00 0.0 425.70 -10.74 423.54 -15.09H423.45V-10.62V0.0H419.70V-20.93H424.05L430.35 -10.2L432.51 -5.85H432.60V-10.32V-20.93H436.35V0.0ZM451.78 0.36Q449.11 0.36 447.21 -0.60Q445.30 -1.56 443.98 -3.12L446.65 -5.7Q447.73 -4.43 449.07 -3.78Q450.40 -3.12 452.02 -3.12Q453.85 -3.12 454.78 -3.93Q455.71 -4.74 455.71 -6.06Q455.71 -6.77 455.46 -7.30Q455.20 -7.83 454.57 -8.19Q453.94 -8.54 452.86 -8.73L450.88 -9.03Q448.78 -9.36 447.39 -10.14Q445.99 -10.92 445.30 -12.18Q444.61 -13.44 444.61 -15.12Q444.61 -17.00 445.54 -18.39Q446.47 -19.77 448.17 -20.53Q449.86 -21.3 452.20 -21.3Q454.57 -21.3 456.34 -20.50Q458.11 -19.71 459.37 -18.21L456.67 -15.66Q455.89 -16.62 454.78 -17.22Q453.67 -17.82 451.99 -17.82Q450.31 -17.82 449.44 -17.17Q448.57 -16.53 448.57 -15.36Q448.57 -14.54 448.87 -14.04Q449.17 -13.53 449.83 -13.24Q450.49 -12.95 451.48 -12.75L453.43 -12.38Q455.56 -12.03 456.94 -11.25Q458.32 -10.46 458.98 -9.25Q459.64 -8.04 459.64 -6.3Q459.64 -4.32 458.73 -2.82Q457.81 -1.31 456.04 -0.47Q454.27 0.36 451.78 0.36ZM482.64 0.0H478.68V-20.93H492.15V-17.43H482.64V-12.33H490.92V-8.85H482.64ZM508.21 0.36Q505.48 0.36 503.41 -0.87Q501.34 -2.1 500.22 -4.51Q499.09 -6.93 499.09 -10.46Q499.09 -14.01 500.22 -16.42Q501.34 -18.84 503.41 -20.07Q505.48 -21.3 508.21 -21.3Q510.97 -21.3 513.03 -20.07Q515.08 -18.84 516.21 -16.42Q517.33 -14.01 517.33 -10.46Q517.33 -6.93 516.21 -4.51Q515.08 -2.1 513.03 -0.87Q510.97 0.36 508.21 0.36ZM508.21 -3.15Q509.74 -3.15 510.84 -3.84Q511.93 -4.53 512.53 -5.80Q513.13 -7.08 513.13 -8.85V-12.09Q513.13 -13.88 512.53 -15.14Q511.93 -16.41 510.84 -17.1Q509.74 -17.79 508.21 -17.79Q506.74 -17.79 505.63 -17.1Q504.52 -16.41 503.91 -15.14Q503.29 -13.88 503.29 -12.09V-8.85Q503.29 -7.08 503.91 -5.80Q504.52 -4.53 505.63 -3.84Q506.74 -3.15 508.21 -3.15ZM529.31 -8.07V0.0H525.35V-20.93H534.80Q536.72 -20.93 538.10 -20.14Q539.48 -19.34 540.23 -17.89Q540.98 -16.43 540.98 -14.45Q540.98 -12.33 540.01 -10.75Q539.03 -9.18 537.08 -8.52L541.37 0.0H536.96L533.06 -8.07ZM529.31 -11.4H534.41Q535.19 -11.4 535.73 -11.68Q536.27 -11.96 536.57 -12.49Q536.87 -13.02 536.87 -13.77V-15.14Q536.87 -15.93 536.57 -16.43Q536.27 -16.95 535.73 -17.22Q535.19 -17.49 534.41 -17.49H529.31ZM568.48 0.36Q565.72 0.36 563.70 -0.84Q561.67 -2.04 560.56 -4.42Q559.45 -6.81 559.45 -10.32Q559.45 -13.86 560.56 -16.30Q561.67 -18.75 563.70 -20.02Q565.72 -21.3 568.48 -21.3Q571.27 -21.3 573.15 -20.1Q575.02 -18.9 576.13 -16.47L572.74 -14.67Q572.29 -16.08 571.27 -16.93Q570.25 -17.79 568.48 -17.79Q566.26 -17.79 564.96 -16.29Q563.65 -14.79 563.65 -12.09V-8.79Q563.65 -6.12 564.96 -4.63Q566.26 -3.15 568.48 -3.15Q570.25 -3.15 571.36 -4.10Q572.47 -5.06 573.01 -6.47L576.22 -4.59Q575.11 -2.25 573.19 -0.94Q571.27 0.36 568.48 0.36ZM591.83 0.36Q589.10 0.36 587.03 -0.87Q584.96 -2.1 583.84 -4.51Q582.71 -6.93 582.71 -10.46Q582.71 -14.01 583.84 -16.42Q584.96 -18.84 587.03 -20.07Q589.10 -21.3 591.83 -21.3Q594.59 -21.3 596.65 -20.07Q598.70 -18.84 599.83 -16.42Q600.95 -14.01 600.95 -10.46Q600.95 -6.93 599.83 -4.51Q598.70 -2.1 596.65 -0.87Q594.59 0.36 591.83 0.36ZM591.83 -3.15Q593.36 -3.15 594.46 -3.84Q595.55 -4.53 596.15 -5.80Q596.75 -7.08 596.75 -8.85V-12.09Q596.75 -13.88 596.15 -15.14Q595.55 -16.41 594.46 -17.1Q593.36 -17.79 591.83 -17.79Q590.36 -17.79 589.25 -17.1Q588.14 -16.41 587.53 -15.14Q586.91 -13.88 586.91 -12.09V-8.85Q586.91 -7.08 587.53 -5.80Q588.14 -4.53 589.25 -3.84Q590.36 -3.15 591.83 -3.15ZM621.27 0.0 614.97 -10.74 612.81 -15.09H612.72V-10.62V0.0H608.97V-20.93H613.32L619.62 -10.2L621.78 -5.85H621.87V-10.32V-20.93H625.62V0.0ZM648.73 -17.43H642.76V0.0H638.81V-17.43H632.86V-20.93H648.73ZM659.90 -8.07V0.0H655.94V-20.93H665.39Q667.31 -20.93 668.69 -20.14Q670.07 -19.34 670.82 -17.89Q671.57 -16.43 671.57 -14.45Q671.57 -12.33 670.60 -10.75Q669.62 -9.18 667.68 -8.52L671.96 0.0H667.56L663.65 -8.07ZM659.90 -11.4H665.00Q665.78 -11.4 666.32 -11.68Q666.86 -11.96 667.16 -12.49Q667.46 -13.02 667.46 -13.77V-15.14Q667.46 -15.93 667.16 -16.43Q666.86 -16.95 666.32 -17.22Q665.78 -17.49 665.00 -17.49H659.90ZM696.93 0.0H692.82L691.14 -5.34H683.70L682.05 0.0H678.03L685.05 -20.93H689.97ZM690.18 -8.73 688.47 -14.01 687.48 -17.34H687.33L686.34 -14.01L684.66 -8.73ZM712.15 0.36Q709.39 0.36 707.37 -0.84Q705.34 -2.04 704.23 -4.42Q703.12 -6.81 703.12 -10.32Q703.12 -13.86 704.23 -16.30Q705.34 -18.75 707.37 -20.02Q709.39 -21.3 712.15 -21.3Q714.94 -21.3 716.82 -20.1Q718.69 -18.9 719.80 -16.47L716.41 -14.67Q715.96 -16.08 714.94 -16.93Q713.92 -17.79 712.15 -17.79Q709.93 -17.79 708.63 -16.29Q707.32 -14.79 707.32 -12.09V-8.79Q707.32 -6.12 708.63 -4.63Q709.93 -3.15 712.15 -3.15Q713.92 -3.15 715.03 -4.10Q716.14 -5.06 716.68 -6.47L719.89 -4.59Q718.78 -2.25 716.86 -0.94Q714.94 0.36 712.15 0.36ZM741.47 -17.43H735.50V0.0H731.54V-17.43H725.60V-20.93H741.47ZM756.90 0.36Q754.17 0.36 752.10 -0.87Q750.03 -2.1 748.91 -4.51Q747.78 -6.93 747.78 -10.46Q747.78 -14.01 748.91 -16.42Q750.03 -18.84 752.10 -20.07Q754.17 -21.3 756.90 -21.3Q759.66 -21.3 761.72 -20.07Q763.77 -18.84 764.90 -16.42Q766.02 -14.01 766.02 -10.46Q766.02 -6.93 764.90 -4.51Q763.77 -2.1 761.72 -0.87Q759.66 0.36 756.90 0.36ZM756.90 -3.15Q758.43 -3.15 759.53 -3.84Q760.62 -4.53 761.22 -5.80Q761.82 -7.08 761.82 -8.85V-12.09Q761.82 -13.88 761.22 -15.14Q760.62 -16.41 759.53 -17.1Q758.43 -17.79 756.90 -17.79Q755.43 -17.79 754.32 -17.1Q753.21 -16.41 752.60 -15.14Q751.98 -13.88 751.98 -12.09V-8.85Q751.98 -7.08 752.60 -5.80Q753.21 -4.53 754.32 -3.84Q755.43 -3.15 756.90 -3.15ZM778.00 -8.07V0.0H774.04V-20.93H783.49Q785.41 -20.93 786.79 -20.14Q788.17 -19.34 788.92 -17.89Q789.67 -16.43 789.67 -14.45Q789.67 -12.33 788.70 -10.75Q787.72 -9.18 785.77 -8.52L790.06 0.0H785.65L781.75 -8.07ZM778.00 -11.4H783.10Q783.88 -11.4 784.42 -11.68Q784.96 -11.96 785.26 -12.49Q785.56 -13.02 785.56 -13.77V-15.14Q785.56 -15.93 785.26 -16.43Q784.96 -16.95 784.42 -17.22Q783.88 -17.49 783.10 -17.49H778.00ZM804.47 0.36Q801.80 0.36 799.90 -0.60Q797.99 -1.56 796.67 -3.12L799.34 -5.7Q800.42 -4.43 801.76 -3.78Q803.09 -3.12 804.71 -3.12Q806.54 -3.12 807.47 -3.93Q808.40 -4.74 808.40 -6.06Q808.40 -6.77 808.15 -7.30Q807.89 -7.83 807.26 -8.19Q806.63 -8.54 805.55 -8.73L803.57 -9.03Q801.47 -9.36 800.08 -10.14Q798.68 -10.92 797.99 -12.18Q797.30 -13.44 797.30 -15.12Q797.30 -17.00 798.23 -18.39Q799.16 -19.77 800.86 -20.53Q802.55 -21.3 804.89 -21.3Q807.26 -21.3 809.03 -20.50Q810.80 -19.71 812.06 -18.21L809.36 -15.66Q808.58 -16.62 807.47 -17.22Q806.36 -17.82 804.68 -17.82Q803.00 -17.82 802.13 -17.17Q801.26 -16.53 801.26 -15.36Q801.26 -14.54 801.56 -14.04Q801.86 -13.53 802.52 -13.24Q803.18 -12.95 804.17 -12.75L806.12 -12.38Q808.25 -12.03 809.63 -11.25Q811.01 -10.46 811.67 -9.25Q812.33 -8.04 812.33 -6.3Q812.33 -4.32 811.42 -2.82Q810.50 -1.31 808.73 -0.47Q806.96 0.36 804.47 0.36Z" class="lt"/></svg></div>
+<h1 style="font-family:var(--f-display);font-size:32px">Request received</h1>
+<p style="color:var(--ink-2)">Thanks. We'll review your project and get back to you shortly. You can send plans and files to <strong>Sales@PermitEngineering.com</strong>.</p>
+<p><a class="btn" href="/">Back to home</a></p></main></body></html>
