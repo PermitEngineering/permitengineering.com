@@ -17,3 +17,13 @@
 - Email: Info@PermitEngineering.com
 - Service area: statewide Florida
 - Website: https://www.permitengineering.com/
+
+## Pages
+- [Fire Alarm Permit Drawings](https://www.permitengineering.com/fire-alarm-permit-drawings/): Signed and sealed fire alarm permit drawings for Florida contractors: risers, device layouts, NAC circuits, sequence of operations and battery calcs to NFPA 72, FBC and FFPC.
+- [Access Control Permit Drawings](https://www.permitengineering.com/access-control-permit-drawings/): Door-by-door access control permit drawings for Florida contractors: hardware schedules, fire alarm release, egress compliance and head-end layout, signed and sealed by a PE.
+- [Low Voltage & CCTV Permit Drawings](https://www.permitengineering.com/low-voltage-cctv-permit-drawings/): Signed and sealed low voltage permit drawings for Florida contractors: CCTV and video surveillance, intrusion detection, intercom and structured cabling, per NFPA 70 and FBC.
+- [Electrical Permit Drawings](https://www.permitengineering.com/electrical-permit-drawings/): Sealed electrical permit drawings for Florida commercial projects of any size: power plans, panel schedules, load calculations, service changes and equipment connections per NFPA 70 (NEC).
+- [Sign Permit Drawings](https://www.permitengineering.com/sign-permit-drawings/): Engineered sign permit drawings for Florida sign contractors: channel letters, raceways, storefront and wall signs, with wind load calcs, attachment details and sign electrical.
+- [Broward County](https://www.permitengineering.com/broward-county/): Signed and sealed fire alarm, access control, low voltage, electrical and sign permit drawings for contractors in Broward County, from a PE based in Davie.
+- [Miami-Dade County](https://www.permitengineering.com/miami-dade-county/): Signed and sealed fire alarm, access control, low voltage, electrical and sign permit drawings for contractors in Miami-Dade County, drawn for your city's AHJ.
+- [Palm Beach County](https://www.permitengineering.com/palm-beach-county/): Signed and sealed fire alarm, access control, low voltage, electrical and sign permit drawings for contractors in Palm Beach County, drawn for your local AHJ.

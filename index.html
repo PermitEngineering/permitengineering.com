@@ -188,6 +188,13 @@ footer{padding-block:40px;border-top:1px solid var(--hair);font-size:14px;color:
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
 footer .flogo{width:220px}
 footer .lic{font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;display:grid;gap:4px}
+/* footer links to service and area pages */
+footer .fnav{margin-top:28px;padding-top:20px;border-top:1px solid var(--hair);display:grid;gap:10px;justify-content:start;align-items:start}
+footer .fnav nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+footer .fnav .fnav-h{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink);min-width:150px}
+footer .fnav a{color:var(--ink-2);text-decoration:none}
+footer .fnav a:hover{color:var(--red-ink);text-decoration:underline}
+footer .fnav .fnav-note{font-size:13px;color:var(--ink-2);opacity:.8}
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <script type="application/ld+json">
@@ -539,6 +546,10 @@ footer .lic{font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;displa
       <span>Florida PE No. 67659 · Electrical Contractor No. EC13004430 · Engineering Business No. CA 29002</span>
       <span>© 2026 Eng Tech Net, Inc.</span>
     </div>
+  </div>
+  <div class="wrap fnav">
+    <nav aria-label="Services"><span class="fnav-h">Services</span><a href="/fire-alarm-permit-drawings/">Fire alarm</a><a href="/access-control-permit-drawings/">Access control</a><a href="/low-voltage-cctv-permit-drawings/">Low voltage &amp; CCTV</a><a href="/electrical-permit-drawings/">Electrical</a><a href="/sign-permit-drawings/">Signs</a></nav>
+    <nav aria-label="Areas we serve"><span class="fnav-h">Areas we serve</span><a href="/broward-county/">Broward County</a><a href="/miami-dade-county/">Miami-Dade County</a><a href="/palm-beach-county/">Palm Beach County</a><span class="fnav-note">Statewide Florida</span></nav>
   </div>
 </footer>
 
