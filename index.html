@@ -133,14 +133,21 @@ section{padding-block:84px}
 .elev .lt{fill:var(--red)}
 .elev .wall{fill:var(--bg-alt);stroke:var(--ink)}
 
-/* process */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:2px solid var(--rule)}
-.steps li{padding:24px 20px;border-right:1px solid var(--hair);display:flex;flex-direction:column;gap:10px;min-width:0;background:var(--card)}
-.steps li:last-child{border-right:0}
-.steps .n{font-family:var(--f-display);font-weight:900;font-size:28px;color:var(--red-ink)}
+/* process — numbered path, title-block cards */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.steps li{position:relative;padding:24px 18px 22px;border:2px solid var(--rule);background:var(--card);display:flex;flex-direction:column;gap:10px;min-width:0}
+.steps li:not(:last-child)::after{content:"";position:absolute;top:38px;right:-14px;width:8px;height:8px;border-top:2px solid var(--red);border-right:2px solid var(--red);transform:rotate(45deg);z-index:1}
+.steps .n{display:grid;place-items:center;width:36px;height:36px;background:var(--red);color:var(--on-red);font-family:var(--f-display);font-weight:900;font-size:15px;letter-spacing:.02em;flex:none}
 .steps h3{font-size:17px;font-weight:600}
 .steps p{font-size:15px;color:var(--ink-2)}
-@media (max-width:900px){.steps{grid-template-columns:minmax(0,1fr)}.steps li{border-right:0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:14px}.steps li:last-child{border-bottom:0}.steps .n{grid-row:span 2}}
+.process-cta{margin-top:36px}
+@media (max-width:900px){
+  .steps{grid-template-columns:minmax(0,1fr);gap:14px}
+  .steps li{display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:14px;align-items:start;padding:20px 18px}
+  .steps li:not(:last-child)::after{content:none}
+  .steps .n{grid-row:span 2}
+  .steps h3{grid-column:2}
+}
 
 /* checklist */
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
@@ -465,16 +472,38 @@ footer .fnav .fnav-note{font-size:13px;color:var(--ink-2);opacity:.8}
   <section id="process" aria-labelledby="proc-h">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">How it works</p>
-        <h2 id="proc-h">From your plans to an approved permit.</h2>
+        <p class="eyebrow">Our process</p>
+        <h2 id="proc-h">From your plans to a signed and sealed permit set.</h2>
+        <p>One engineering team handles Fire Alarm, Access Control, Low Voltage, CCTV, Electrical Systems, and structural signs for contractors in South Florida.</p>
       </div>
       <ol class="steps">
-        <li><span class="n">1</span><h3>Send the project</h3><p>Floor plans, scope markups and equipment list.</p></li>
-        <li><span class="n">2</span><h3>Get a quote</h3><p>A fixed price based on the scope and device count.</p></li>
-        <li><span class="n">3</span><h3>Design &amp; calcs</h3><p>Drawings, calculations and code analysis for your AHJ.</p></li>
-        <li><span class="n">4</span><h3>Signed &amp; sealed</h3><p>Permit-ready PDFs, digitally signed and sealed.</p></li>
-        <li><span class="n">5</span><h3>Plan review support</h3><p>We respond to reviewer comments until the set is approved.</p></li>
+        <li>
+          <span class="n" aria-hidden="true">1</span>
+          <h3>Send the project</h3>
+          <p>Share floor plans, the project scope, and an equipment list with your quote request. Our team uses that package to scope the work.</p>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true">2</span>
+          <h3>Review the estimate</h3>
+          <p>We review the scope and send an estimate so you can move ahead with a clear price.</p>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true">3</span>
+          <h3>Design and engineering</h3>
+          <p>Our team prepares the drawings, calculations, and code analysis for your authority having jurisdiction.</p>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true">4</span>
+          <h3>Signed and sealed set</h3>
+          <p>You receive a permit-ready PDF set, digitally signed and sealed by a licensed Professional Engineer.</p>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true">5</span>
+          <h3>Plan review support</h3>
+          <p>If the reviewer has comments, our team responds and revises the set through the comment cycle.</p>
+        </li>
       </ol>
+      <p class="process-cta"><a class="btn" href="#contact">Request a quote</a></p>
     </div>
   </section>
 
