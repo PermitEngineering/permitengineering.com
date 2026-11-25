@@ -202,6 +202,20 @@ footer .fnav .fnav-h{font-family:var(--f-mono);font-size:12px;letter-spacing:.12
 footer .fnav a{color:var(--ink-2);text-decoration:none}
 footer .fnav a:hover{color:var(--red-ink);text-decoration:underline}
 footer .fnav .fnav-note{font-size:13px;color:var(--ink-2);opacity:.8}
+
+/* homepage code updates */
+.update-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.update-card{display:flex;flex-direction:column;border:2px solid var(--rule);background:var(--card);text-decoration:none;color:inherit;min-width:0}
+.update-card img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;object-position:top center;border-bottom:1px solid var(--hair);background:var(--bg)}
+.update-card .update-body{padding:22px 22px 24px;display:grid;gap:8px}
+.update-card h3{font-family:var(--f-display);font-weight:700;font-size:22px;color:var(--ink)}
+.update-card p{color:var(--ink-2);font-size:16px}
+.update-card .more{font-weight:600;font-size:14px;color:var(--red-ink);margin-top:4px}
+.update-card:hover{border-color:var(--red)}
+.svc-link{margin:0;padding-top:10px;font-size:14px;font-weight:600}
+.svc-link a{color:var(--red-ink);text-decoration:none}
+.svc-link a:hover{text-decoration:underline}
+@media (max-width:700px){.update-grid{grid-template-columns:minmax(0,1fr)}}
 </style>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <script type="application/ld+json">
@@ -380,6 +394,7 @@ footer .fnav .fnav-note{font-size:13px;color:var(--ink-2);opacity:.8}
             <li>Elevator recall, sprinkler monitoring and smoke control interfaces</li>
           </ul>
           <p class="refs">NFPA 72 · NFPA 101 · FBC</p>
+          <p class="svc-link"><a href="/code-updates/fire-alarm/">Florida 2026 code update</a></p>
         </article>
         <article class="svc">
           <span class="code">AC · Access control</span>
@@ -391,6 +406,7 @@ footer .fnav .fnav-note{font-size:13px;color:var(--ink-2);opacity:.8}
             <li>Controller, power supply and head-end layout</li>
           </ul>
           <p class="refs">NFPA 101 · FBC · NFPA 70</p>
+          <p class="svc-link"><a href="/code-updates/access-control/">Florida 2026 code update</a></p>
         </article>
         <article class="svc">
           <span class="code">LV · Low voltage</span>
@@ -469,7 +485,35 @@ footer .fnav .fnav-note{font-size:13px;color:var(--ink-2);opacity:.8}
     </div>
   </section>
 
-  <section id="process" aria-labelledby="proc-h">
+  <section id="code-updates" aria-labelledby="cu-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Code updates</p>
+        <h2 id="cu-h">Florida's building and fire codes update on December 31, 2026.</h2>
+        <p>Plain-language courtesy summaries for contractors of the changes most likely to affect Fire Alarm and Access Control projects.</p>
+      </div>
+      <div class="update-grid">
+        <a class="update-card" href="/code-updates/fire-alarm/">
+          <img src="/assets/code-updates/florida-2026-fire-alarm-systems-p1.webp" width="1530" height="1980" alt="Cover page of the Fire Alarm Systems courtesy code update.">
+          <div class="update-body">
+            <h3>Fire Alarm Systems</h3>
+            <p>What Florida's new building and fire codes mean for your fire alarm projects.</p>
+            <p class="more">Read the bulletin</p>
+          </div>
+        </a>
+        <a class="update-card" href="/code-updates/access-control/">
+          <img src="/assets/code-updates/florida-2026-access-control-door-locking-p1.webp" width="1530" height="1980" alt="Cover page of the Access Control and Door Locking courtesy code update.">
+          <div class="update-body">
+            <h3>Access Control &amp; Door Locking</h3>
+            <p>What Florida's new building and fire codes mean for card readers, maglocks and locked doors.</p>
+            <p class="more">Read the bulletin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <section id="process" aria-labelledby="proc-h">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Our process</p>
@@ -579,6 +623,7 @@ footer .fnav .fnav-note{font-size:13px;color:var(--ink-2);opacity:.8}
   <div class="wrap fnav">
     <nav aria-label="Services"><span class="fnav-h">Services</span><a href="/fire-alarm-permit-drawings/">Fire alarm</a><a href="/access-control-permit-drawings/">Access control</a><a href="/low-voltage-cctv-permit-drawings/">Low voltage &amp; CCTV</a><a href="/electrical-permit-drawings/">Electrical</a><a href="/sign-permit-drawings/">Signs</a></nav>
     <nav aria-label="Areas we serve"><span class="fnav-h">Areas we serve</span><a href="/broward-county/">Broward County</a><a href="/miami-dade-county/">Miami-Dade County</a><a href="/palm-beach-county/">Palm Beach County</a><a href="/florida-statewide/">Statewide Florida</a></nav>
+    <nav aria-label="Code updates"><span class="fnav-h">Code updates</span><a href="/code-updates/">All updates</a><a href="/code-updates/fire-alarm/">Fire Alarm Systems</a><a href="/code-updates/access-control/">Access Control &amp; Door Locking</a></nav>
   </div>
 </footer>
 
