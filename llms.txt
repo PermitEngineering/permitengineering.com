@@ -31,3 +31,5 @@
 - [Florida 2026 Code Updates](https://www.permitengineering.com/code-updates/): Courtesy bulletins summarizing what Florida's December 31, 2026 building and fire code changes mean for contractors.
 - [Fire Alarm Systems code update](https://www.permitengineering.com/code-updates/fire-alarm/): Courtesy code update on what the new Florida building and fire codes mean for fire alarm projects.
 - [Access Control & Door Locking code update](https://www.permitengineering.com/code-updates/access-control/): Courtesy code update on what the new Florida building and fire codes mean for card readers, maglocks and locked doors.
+- [Fire Sprinkler Systems code update](https://www.permitengineering.com/code-updates/fire-sprinkler/): Courtesy code update on what the new Florida building and fire codes mean for sprinkler projects and their alarms.
+- [Firefighter Radio Coverage (ERCES / BDA) code update](https://www.permitengineering.com/code-updates/firefighter-radio/): Courtesy code update on what Florida's new fire code and state law mean for in-building radio systems.
